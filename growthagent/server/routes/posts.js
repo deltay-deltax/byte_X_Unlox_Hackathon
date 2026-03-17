@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
     const savedPost = await newPost.save();
     
     // Emit via socket.io
-    req.io.emit('newPost', savedPost);
+    req.io.emit('new_post', savedPost);
     
     res.status(201).json(savedPost);
   } catch (err) {

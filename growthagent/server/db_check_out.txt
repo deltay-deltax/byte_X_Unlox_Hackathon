@@ -1,0 +1,9 @@
+--- USERS ---
+Handle: thecrumbstory | ID: 64a1b2c3d4e5f6789012345a | Posts: 31
+Handle: fitmovebangalore | ID: 64a1b2c3d4e5f6789012345b | Posts: 7
+Handle: techlabnest | ID: 64a1b2c3d4e5f6789012345c | Posts: 0
+
+--- SAMPLE POST ---
+Post Handle: thecrumbstory
+Post userId: 64a1b2c3d4e5f6789012345a
+Post userId string: 64a1b2c3d4e5f6789012345a

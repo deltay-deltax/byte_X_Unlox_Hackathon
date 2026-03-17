@@ -3,18 +3,18 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BarChart3, LogOut, Newspaper, PenSquare, Sparkles } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 
-function NavLink({ to, label, icon: Icon }) {
+function NavLink({ to, label, icon: Icon, className = "" }) {
 	const location = useLocation();
 	const active = location.pathname === to;
+	const baseClass = active
+		? 'premium-link premium-link-active text-sm font-medium'
+		: 'premium-link text-sm font-medium';
+	
 	return (
 		<Link
 			to={to}
 			aria-label={label}
-			className={
-				active
-					? 'premium-link premium-link-active text-sm font-medium'
-					: 'premium-link text-sm font-medium'
-			}
+			className={`${baseClass} ${className}`}
 		>
 			<Icon className="h-4 w-4" />
 			<span className="premium-link-label">{label}</span>
@@ -44,7 +44,12 @@ export default function NavBar() {
 				<div className="nav-links-row flex items-center gap-2 sm:gap-4">
 					<NavLink to="/feed" label="Feed" icon={Newspaper} />
 					<NavLink to="/dashboard" label="Analytics" icon={BarChart3} />
-					<NavLink to="/onboarding" label="New Post" icon={PenSquare} />
+					<NavLink 
+						to="/onboarding" 
+						label="New Post" 
+						icon={PenSquare} 
+						className="relative rounded-lg bg-cyan-500/10 px-3 py-1.5 transition-all hover:bg-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.2)] hover:shadow-[0_0_20px_rgba(34,211,238,0.4)]"
+					/>
 					<button
 						className="premium-link text-sm font-medium"
 						aria-label="Logout"

@@ -1,9 +1,11 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, Wand2 } from 'lucide-react';
 import NavBar from '../components/NavBar.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
-import { createPost } from '../services/api.js';
+import { createPost, generateAIPost } from '../services/api.js';
+import { useAgent } from '../context/AgentContext.jsx';
+import AgentProcess from '../components/AgentProcess.jsx';
 
 const POST_TYPES = ['Static', 'Reel', 'Carousel'];
 
@@ -18,6 +20,7 @@ function parseHashtags(input) {
 export default function Onboarding() {
 	const navigate = useNavigate();
 	const { user } = useAuth();
+	const { agentThinking, setAgentThinking, setAgentStatus } = useAgent();
 
 	const [type, setType] = useState('Static');
 	const [caption, setCaption] = useState('');
@@ -50,6 +53,32 @@ export default function Onboarding() {
 		}
 	}
 
+	async function onGenerateAI() {
+		setError('');
+		setAgentStatus({ step: 0, message: 'Initializing agent...' });
+		setAgentThinking(true);
+		setLoading(true);
+		try {
+			// Trigger n8n agent on backend, which saves the post and redirects we handle here
+			await generateAIPost({
+				userId: user.userId,
+				handle: user.handle,
+				contentType: type,
+				goal: 'Engage and grow audience'
+			});
+			// Give a small delay for the socket to definitely hit if and then navigate
+			setTimeout(() => {
+				navigate('/feed');
+			}, 1000);
+		} catch (err) {
+			const message = err?.response?.data?.message || err?.message || 'Failed to generate post';
+			setError(message);
+			setLoading(false);
+		} finally {
+			setAgentThinking(false);
+		}
+	}
+
 	return (
 		<div className="auth-shell">
 			<div className="bg-blob bg-blob-a" />
@@ -66,6 +95,8 @@ export default function Onboarding() {
 							<Sparkles className="h-4 w-4" />
 						</div>
 					</div>
+
+					<AgentProcess />
 
 					<form className="mt-5 space-y-4" onSubmit={onSubmit}>
 						<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -127,13 +158,24 @@ export default function Onboarding() {
 
 						{error ? <div className="text-sm text-red-200">{error}</div> : null}
 
-						<button
-							type="submit"
-							disabled={loading || !caption.trim() || !imageUrl.trim()}
-							className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
-						>
-							{loading ? 'Posting…' : 'Post'}
-						</button>
+						<div className="flex gap-3 mt-6">
+							<button
+								type="submit"
+								disabled={loading || !caption.trim() || !imageUrl.trim()}
+								className="btn-primary flex-1 disabled:cursor-not-allowed disabled:opacity-60"
+							>
+								{loading && !agentThinking ? 'Posting…' : 'Manual Post'}
+							</button>
+							<button
+								type="button"
+								onClick={onGenerateAI}
+								disabled={loading}
+								className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-600 to-violet-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-500/20 transition-all hover:scale-[1.02] hover:shadow-violet-500/30 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed"
+							>
+								<Wand2 className="h-4 w-4" />
+								{agentThinking ? 'Generating...' : 'Generate with AI'}
+							</button>
+						</div>
 					</form>
 				</div>
 			</div>

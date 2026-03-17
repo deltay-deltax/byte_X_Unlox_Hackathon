@@ -18,13 +18,13 @@ import {
 const featureItems = [
 	{
 		icon: WandSparkles,
-		title: 'AI Campaign Studio',
-		description: 'Generate premium content directions, hooks, and visuals in seconds with branded consistency.',
+		title: 'AI Content Manager',
+		description: 'Autonomous agents that learn your brand voice and draft posts that actually sound like you.',
 	},
 	{
 		icon: ChartNoAxesCombined,
-		title: 'Live Growth Insights',
-		description: 'Track content performance and growth loops with boardroom-ready analytics and smart alerts.',
+		title: 'Boardroom Analytics',
+		description: 'Get clear, jargon-free insights into what drives your business growth, 24/7.',
 	},
 	{
 		icon: ShieldCheck,
@@ -157,9 +157,9 @@ export default function Landing() {
 						<p className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-medium text-cyan-100">
 							<Zap className="h-3.5 w-3.5" /> AI-powered growth orchestration platform
 						</p>
-						<h1 className="hero-title">Build high-converting campaigns at startup speed.</h1>
+						<h1 className="hero-title">Hire your first autonomous Social Media Manager.</h1>
 						<p className="hero-subtitle">
-							GrowthAgent helps product teams ideate, launch, and optimize content in one premium command center.
+							GrowthAgent handles your SMB's content strategy, generation, and analytics. Stop paying for agencies—activate your AI employee today.
 						</p>
 						<div className="mt-8 flex flex-wrap gap-4">
 							<Link to="/login" className="btn-primary group">
@@ -267,6 +267,43 @@ export default function Landing() {
 								</Link>
 							</div>
 						))}
+					</div>
+				</section>
+
+				{/* Mission Guide for Testers */}
+				<section id="demo" className="mx-auto mt-12 max-w-4xl px-4 py-16">
+					<div className="premium-panel border-cyan-400/30 bg-cyan-400/5 p-8 text-center shadow-[0_0_40px_rgba(34,211,238,0.1)]">
+						<div className="mb-4 flex justify-center">
+							<div className="rounded-full bg-cyan-400/20 p-3 text-cyan-300">
+								<Zap className="h-6 w-6" />
+							</div>
+						</div>
+						<h2 className="mb-4 text-2xl font-bold text-slate-100">Your First Mission: Activate the AI</h2>
+						<p className="mb-8 text-slate-300">Experience the power of an autonomous social media manager in under 60 seconds.</p>
+						
+						<div className="grid gap-6 text-left md:grid-cols-3">
+							<div className="space-y-2">
+								<div className="text-xl font-bold text-cyan-400">01.</div>
+								<div className="font-semibold text-slate-200">Login</div>
+								<p className="text-xs text-slate-400">Use handle <code className="text-cyan-200">thecrumbstory</code> and password <code className="text-cyan-200">demo1234</code>.</p>
+							</div>
+							<div className="space-y-2">
+								<div className="text-xl font-bold text-cyan-400">02.</div>
+								<div className="font-semibold text-slate-200">Click "New Post"</div>
+								<p className="text-xs text-slate-400">Look for the glowing button in your navigation bar.</p>
+							</div>
+							<div className="space-y-2">
+								<div className="text-xl font-bold text-cyan-400">03.</div>
+								<div className="font-semibold text-slate-200">Generate with AI</div>
+								<p className="text-xs text-slate-400">Watch the 9-step engine build your content strategy in real-time.</p>
+							</div>
+						</div>
+						
+						<div className="mt-10">
+							<Link to="/login" className="btn-primary">
+								Start Mission
+							</Link>
+						</div>
 					</div>
 				</section>
 

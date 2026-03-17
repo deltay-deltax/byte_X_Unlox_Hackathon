@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { getAnalyticsSummary } from '../services/api.js';
@@ -69,10 +69,10 @@ export default function Dashboard() {
 			<NavBar />
 			<div className="auth-container mx-auto w-full max-w-6xl px-4 py-6 lg:px-8">
 				<h1 className="mb-1 text-2xl font-semibold text-slate-100">Analytics Dashboard</h1>
-				<p className="mb-6 text-sm premium-muted">Realtime campaign signals and post-level outcomes.</p>
+				<p className="mb-10 text-sm premium-muted">Realtime campaign signals and post-level outcomes.</p>
 
 				{/* Overall Metrics */}
-				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mb-6">
+				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mb-8">
 					<div className="metric-tile">
 						<div className="metric-label">Total Views</div>
 						<div className="metric-value">{total.totalViews?.toLocaleString() || 0}</div>
