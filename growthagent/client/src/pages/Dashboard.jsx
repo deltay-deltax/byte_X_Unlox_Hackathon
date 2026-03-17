@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { getAnalyticsSummary } from '../services/api.js';
