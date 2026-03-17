@@ -80,3 +80,5 @@ router.post('/analyse', async (req, res) => {
 });
 
 module.exports = router;
+
+//exporting the fn 
