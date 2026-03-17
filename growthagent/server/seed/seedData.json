@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "_id": "64a1b2c3d4e5f6789012345a",
+      "handle": "thecrumbstory",
+      "name": "The Crumb Story",
+      "email": "crumb@demo.com",
+      "password": "demo1234",
+      "bio": "Handcrafted breads & pastries baked fresh every morning 🥐 | Bangalore's favourite bakery",
+      "profilePic": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=150",
+      "followers": 1243,
+      "following": 312,
+      "niche": "Bakery / Food",
+      "location": "Bangalore, India",
+      "website": "thecrumbstory.in"
+    },
+    {
+      "_id": "64a1b2c3d4e5f6789012345b",
+      "handle": "fitmovebangalore",
+      "name": "FitMove Studio",
+      "email": "fitmove@demo.com",
+      "password": "demo1234",
+      "bio": "Transform your body. Transform your life 💪 | Personal training & group fitness | Indiranagar, Bangalore",
+      "profilePic": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150",
+      "followers": 3421,
+      "following": 589,
+      "niche": "Fitness / Gym",
+      "location": "Bangalore, India",
+      "website": "fitmove.in"
+    },
+    {
+      "_id": "64a1b2c3d4e5f6789012345c",
+      "handle": "techlabnest",
+      "name": "TechLab Nest",
+      "email": "techlab@demo.com",
+      "password": "demo1234",
+      "bio": "Building the future, one line of code at a time 💻 | SaaS | AI | Dev Tools | Bangalore",
+      "profilePic": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=150",
+      "followers": 892,
+      "following": 204,
+      "niche": "Tech Startup",
+      "location": "Bangalore, India",
+      "website": "techlabnest.io"
+    }
+  ]
+}

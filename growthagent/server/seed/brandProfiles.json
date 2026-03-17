@@ -1,0 +1,55 @@
+{
+  "brandProfiles": [
+    {
+      "userId": "64a1b2c3d4e5f6789012345a",
+      "handle": "thecrumbstory",
+      "niche": "Bakery / Food",
+      "tone": "Warm, homely, personal",
+      "targetAudience": "Urban foodies aged 22-38, Bangalore locals, food enthusiasts",
+      "topContentTypes": ["Reel", "Carousel", "Story Poll"],
+      "bestPostingTimes": ["8:00 AM", "6:00 PM", "8:00 PM"],
+      "peakHour": 18,
+      "topHashtags": ["#bangalorefood", "#bakery", "#reels", "#bakerylove", "#handcrafted", "#foodstagram"],
+      "avgEngagement": "3.8%",
+      "contentMix": { "Reel": 40, "Static": 30, "Carousel": 20, "StoryPoll": 10 },
+      "brandColors": ["#D4A574", "#8B4513", "#FFF8F0"],
+      "weeklyPostingFrequency": 5,
+      "topPerformingContentType": "Reel",
+      "recommendedNextPost": "Reel — behind the scenes content performs 3.4x better than static posts"
+    },
+    {
+      "userId": "64a1b2c3d4e5f6789012345b",
+      "handle": "fitmovebangalore",
+      "niche": "Fitness / Gym",
+      "tone": "Energetic, motivating, results-focused",
+      "targetAudience": "Fitness enthusiasts aged 20-40, working professionals, gym-goers in Bangalore",
+      "topContentTypes": ["Reel", "Carousel", "Static"],
+      "bestPostingTimes": ["6:30 AM", "7:00 PM", "8:00 PM"],
+      "peakHour": 19,
+      "topHashtags": ["#fitness", "#bangalorefitness", "#workout", "#hiit", "#transformation", "#gymlife"],
+      "avgEngagement": "6.1%",
+      "contentMix": { "Reel": 50, "Carousel": 25, "Static": 20, "StoryPoll": 5 },
+      "brandColors": ["#FF4500", "#1A1A1A", "#FFFFFF"],
+      "weeklyPostingFrequency": 6,
+      "topPerformingContentType": "Reel",
+      "recommendedNextPost": "Reel — tutorial/tips content gets 10x more saves and shares"
+    },
+    {
+      "userId": "64a1b2c3d4e5f6789012345c",
+      "handle": "techlabnest",
+      "niche": "Tech Startup / SaaS",
+      "tone": "Professional, opinionated, builder-focused",
+      "targetAudience": "Developers, founders, startup enthusiasts, tech professionals aged 24-40",
+      "topContentTypes": ["Carousel", "Reel", "Static"],
+      "bestPostingTimes": ["9:00 AM", "12:00 PM", "6:00 PM"],
+      "peakHour": 17,
+      "topHashtags": ["#buildinpublic", "#saas", "#techstartup", "#devlife", "#bangalore", "#founders"],
+      "avgEngagement": "5.8%",
+      "contentMix": { "Carousel": 40, "Reel": 35, "Static": 20, "StoryPoll": 5 },
+      "brandColors": ["#0A0A0A", "#3B82F6", "#FFFFFF"],
+      "weeklyPostingFrequency": 4,
+      "topPerformingContentType": "Reel",
+      "recommendedNextPost": "Reel — n8n/AI tool demos get 3x more engagement than opinion posts"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "growthagent-server",
+  "version": "1.0.0",
+  "description": "Server for GrowthAgent",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed:users": "node seed/seedUsers.js",
+    "seed:posts": "node seed/seedPosts.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.0",
+    "socket.io": "^4.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
