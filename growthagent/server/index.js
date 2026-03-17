@@ -13,6 +13,7 @@ dns.setServers(['8.8.8.8']);
 
 const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
+const analyticsRoutes = require('./routes/analytics');
 
 const app = express();
 const server = http.createServer(app);
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
