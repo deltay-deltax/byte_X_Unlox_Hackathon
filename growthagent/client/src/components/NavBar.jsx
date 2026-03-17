@@ -3,18 +3,18 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BarChart3, LogOut, Newspaper, PenSquare, Sparkles } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 
-function NavLink({ to, label, icon: Icon }) {
+function NavLink({ to, label, icon: Icon, className = "" }) {
 	const location = useLocation();
 	const active = location.pathname === to;
+	const baseClass = active
+		? 'premium-link premium-link-active text-sm font-medium'
+		: 'premium-link text-sm font-medium';
+	
 	return (
 		<Link
 			to={to}
 			aria-label={label}
-			className={
-				active
-					? 'premium-link premium-link-active text-sm font-medium'
-					: 'premium-link text-sm font-medium'
-			}
+			className={`${baseClass} ${className}`}
 		>
 			<Icon className="h-4 w-4" />
 			<span className="premium-link-label">{label}</span>
