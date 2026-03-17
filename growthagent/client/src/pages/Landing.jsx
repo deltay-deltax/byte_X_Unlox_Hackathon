@@ -18,13 +18,13 @@ import {
 const featureItems = [
 	{
 		icon: WandSparkles,
-		title: 'AI Campaign Studio',
-		description: 'Generate premium content directions, hooks, and visuals in seconds with branded consistency.',
+		title: 'AI Content Manager',
+		description: 'Autonomous agents that learn your brand voice and draft posts that actually sound like you.',
 	},
 	{
 		icon: ChartNoAxesCombined,
-		title: 'Live Growth Insights',
-		description: 'Track content performance and growth loops with boardroom-ready analytics and smart alerts.',
+		title: 'Boardroom Analytics',
+		description: 'Get clear, jargon-free insights into what drives your business growth, 24/7.',
 	},
 	{
 		icon: ShieldCheck,
@@ -157,9 +157,9 @@ export default function Landing() {
 						<p className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2 text-xs font-medium text-cyan-100">
 							<Zap className="h-3.5 w-3.5" /> AI-powered growth orchestration platform
 						</p>
-						<h1 className="hero-title">Build high-converting campaigns at startup speed.</h1>
+						<h1 className="hero-title">Hire your first autonomous Social Media Manager.</h1>
 						<p className="hero-subtitle">
-							GrowthAgent helps product teams ideate, launch, and optimize content in one premium command center.
+							GrowthAgent handles your SMB's content strategy, generation, and analytics. Stop paying for agencies—activate your AI employee today.
 						</p>
 						<div className="mt-8 flex flex-wrap gap-4">
 							<Link to="/login" className="btn-primary group">
