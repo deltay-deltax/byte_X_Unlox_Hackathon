@@ -55,9 +55,9 @@ export default function Feed() {
 			setPosts((prev) => [post, ...prev]);
 		}
 
-		socket.on('newPost', onNewPost);
+		socket.on('new_post', onNewPost);
 		return () => {
-			socket.off('newPost', onNewPost);
+			socket.off('new_post', onNewPost);
 		};
 	}, [handle]);
 

@@ -34,3 +34,7 @@ export async function getPostMetrics(postId) {
 	return res.data;
 }
 
+export async function generateAIPost(params) {
+	const res = await api.post('/api/agent/generate-post', params);
+	return res.data;
+}

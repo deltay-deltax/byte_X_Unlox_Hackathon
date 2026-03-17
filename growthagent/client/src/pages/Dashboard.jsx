@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
 import { getAnalyticsSummary } from '../services/api.js';
+import TesterGuide from '../components/TesterGuide.jsx';
 
 export default function Dashboard() {
 	const { user } = useAuth();
@@ -70,6 +70,10 @@ export default function Dashboard() {
 			<div className="auth-container mx-auto w-full max-w-6xl px-4 py-6 lg:px-8">
 				<h1 className="mb-1 text-2xl font-semibold text-slate-100">Analytics Dashboard</h1>
 				<p className="mb-6 text-sm premium-muted">Realtime campaign signals and post-level outcomes.</p>
+
+				<div className="mb-8">
+					<TesterGuide />
+				</div>
 
 				{/* Overall Metrics */}
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 mb-6">
